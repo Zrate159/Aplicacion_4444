@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ingreso
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)=login(forma) #forma="ngForm" >
+  <ion-card class="welcome-card">
+
+    <img src="assets/inicio.png"/>  
+
+    <ion-item class="item ios in-list ion-focusable item-label item-label-stacked item-interactive item-input item-has-placeholder hydrated">
+        <ion-input  placeholder="Ingrese su correo" class="sc-ion-input-ios-h sc-ion-input-ios-s ios hydrated" ngModel #user="ngModel" name="user" minLength="3"><ion-icon name="person" ></ion-icon></ion-input>
+        <ion-input type="password" placeholder="Ingrese su contraseña" class="sc-ion-input-ios-h sc-ion-input-ios-s ios hydrated" ngModel #password="ngModel" name="password" minLength="3"><ion-icon name="key" ></ion-icon></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block" color="medium" class="ion-color ion-color-medium ios button button-large button-solid ion-activatable ion-focusable hydrated" type="submit" [disabled]=!forma.valid >Ingresar</ion-button>
+  
+    
+  </ion-card>  
+</form>
+</ion-content>
